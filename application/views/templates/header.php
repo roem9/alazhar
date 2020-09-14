@@ -106,6 +106,7 @@
                       <select name="program" class="form-control form-control-sm">
                           <option value="">Pilih Program</option>
                           <option value="Hifdzi 1">Hifdzi 1</option>
+                          <option value="Full Time 1">Full Time 1</option>
                       </select>
                   </div>
                   <div class="form-group">
