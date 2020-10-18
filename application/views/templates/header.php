@@ -107,6 +107,7 @@
                           <option value="">Pilih Program</option>
                           <option value="Hifdzi 1">Hifdzi 1</option>
                           <option value="Full Time 1">Full Time 1</option>
+                          <option value="Full Time 2">Full Time 2</option>
                       </select>
                   </div>
                   <div class="form-group">
