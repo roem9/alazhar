@@ -49,4 +49,16 @@ class Main_model extends CI_MODEL{
             return $nominal;
         }
     // tes 
+
+    // username
+        public function get_username_terakhir($tgl){
+            $bulan = date("m", strtotime($tgl));
+            $tahun = date("Y", strtotime($tgl));
+
+            $this->db->select("substr(username, 5, 4) as id");
+            $this->db->from("user");
+            $this->db->where("MONTH(tgl_masuk) = $bulan AND YEAR(tgl_masuk) = $tahun");
+            $this->db->order_by("id", "DESC");
+            return $this->db->get()->row_array();
+        }
 }

@@ -32,12 +32,36 @@
                                 <form action="peserta/edit_peserta" method="post">
                                     <input type="hidden" name="id_user">
                                     <div class="form-group">
+                                        <label for="tgl_masuk">Tgl Masuk</label>
+                                        <input type="text" name="tgl_masuk" id="tgl_masuk" class="form-control form-control-sm" readonly>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="username">Username</label>
+                                        <input type="text" name="username" id="username" class="form-control form-control-sm" readonly>
+                                    </div>
+                                    <div class="form-group">
                                         <label for="nama">Nama Lengkap</label>
                                         <input type="text" name="nama" id="nama" class="form-control form-control-sm">
                                     </div>
                                     <div class="form-group">
                                         <label for="no_hp">No Handphone</label>
                                         <input type="text" name="no_hp" id="no_hp" class="form-control form-control-sm">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="alamat">Alamat</label>
+                                        <textarea name="alamat" id="alamat" class="form-control form-control-sm"></textarea>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="t4_lahir">Tempat Lahir</label>
+                                        <input type="text" name="t4_lahir" id="t4_lahir" class="form-control form-control-sm">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="tgl_lahir">Tgl Lahir</label>
+                                        <input type="date" name="tgl_lahir" id="tgl_lahir" class="form-control form-control-sm">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="email">Email</label>
+                                        <input type="text" name="email" id="email" class="form-control form-control-sm">
                                     </div>
                                     <div class="d-flex justify-content-end">
                                         <input type="submit" value="Ubah Data" class="btn btn-sm btn-success" id="btnEdit">
@@ -113,13 +137,14 @@
         <?php endif; ?>
 
         <!-- DataTales Example -->
-        <div class="card shadow mb-4" style="max-width: 750px">
+        <div class="card shadow mb-4" style="max-width: 850px">
             <div class="card-body">
                 <div class="table-responsive">
                     <table id="dataTable" class="table table-sm cus-font">
                         <thead>
                             <tr>
                                 <th style="width: 8%">No</th>
+                                <th style="width: 10%"><center>ID</center></th>
                                 <th>Nama Peserta</th>
                                 <th style="width: 18%"><center>No Hp</center></th>
                                 <th style="width: 10%">Kelas</th>
@@ -132,6 +157,7 @@
                             foreach ($peserta as $peserta) :?>
                                 <tr>
                                     <td><center><?= ++$i?></center></td>
+                                    <td><?= $peserta['username']?></td>
                                     <td><?= $peserta['nama']?></td>
                                     <td><?= $peserta['no_hp']?></td>
                                     <td><center><a href="#modalPeserta" data-toggle="modal" data-id="<?= $peserta['id_user']?>" class="modalPeserta btn btn-sm btn-outline-success" id="kelas"><?= $peserta['kelas']?></a></center></td>
@@ -220,6 +246,12 @@
             dataType : 'json',
             success : function(data){
                 $("#modalPesertaTitle").html(data.nama)
+                $("#tgl_masuk").val(data.tgl_masuk)
+                $("#alamat").val(data.alamat)
+                $("#t4_lahir").val(data.t4_lahir)
+                $("#tgl_lahir").val(data.tgl_lahir)
+                $("#email").val(data.email)
+                $("#username").val(data.username)
                 $("#nama").val(data.nama)
                 $("#no_hp").val(data.no_hp)
                 $("#tgl_masuk").val(data.tgl_masuk)

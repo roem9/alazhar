@@ -67,12 +67,32 @@
             <div class="modal-body cus-font">
               <form action="peserta/add_peserta" method="post">
                   <div class="form-group">
+                      <label for="tgl_masuk ">Tgl Masuk</label>
+                      <input type="date" name="tgl_masuk" class="form-control form-control-sm" required>
+                  </div>
+                  <div class="form-group">
                       <label for="nama">Nama Lengkap</label>
-                      <input type="text" name="nama" class="form-control form-control-sm">
+                      <input type="text" name="nama" class="form-control form-control-sm" required>
+                  </div>
+                  <div class="form-group">
+                      <label for="t4_lahir ">Tempat Lahir</label>
+                      <input type="text" name="t4_lahir" class="form-control form-control-sm">
+                  </div>
+                  <div class="form-group">
+                      <label for="tgl_lahir ">Tgl Lahir</label>
+                      <input type="date" name="tgl_lahir" class="form-control form-control-sm" required>
+                  </div>
+                  <div class="form-group">
+                      <label for="alamat">Alamat</label>
+                      <textarea name="alamat" class="form-control form-control-sm"></textarea>
                   </div>
                   <div class="form-group">
                       <label for="no_hp">No Handphone</label>
                       <input type="text" name="no_hp" class="form-control form-control-sm">
+                  </div>
+                  <div class="form-group">
+                      <label for="email">Email</label>
+                      <input type="text" name="email" class="form-control form-control-sm">
                   </div>
                   <div class="d-flex justify-content-end">
                       <input type="submit" value="Tambah Peserta" class="btn btn-sm btn-primary" id="btnAddPeserta">
