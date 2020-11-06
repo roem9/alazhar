@@ -144,6 +144,44 @@
     </div>
   <!-- modal add kelas -->
 
+  
+  <!-- modal cetak data login -->
+  <div class="modal fade" id="laporan" tabindex="-1" role="dialog" aria-labelledby="exampleModalScrollableTitle" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-scrollable" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="laporanTitle">Cetak Laporan</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body cus-font">
+              <form action="laporan/cetak_laporan" method="post">
+                  <div class="form-group">
+                      <label for="laporan">Laporan</label>
+                      <select name="laporan" class="form-control form-control-sm" required>
+                          <option value="">Pilih Laporan</option>
+                          <option value="Laporan Login">Laporan Login</option>
+                      </select>
+                  </div>
+                  <div class="form-group">
+                    <label for="tgl_awal">Tgl Awal</label>
+                    <input type="date" name="tgl_awal" class="form-control form-control-sm" required>
+                  </div>
+                  <div class="form-group">
+                    <label for="tgl_aknir">Tgl Akhir</label>
+                    <input type="date" name="tgl_aknir" class="form-control form-control-sm" required>
+                  </div>
+                  <div class="d-flex justify-content-end">
+                      <input type="submit" value="Cetak Laporan" class="btn btn-sm btn-primary" id="btnlaporan">
+                  </div>
+              </form>
+            </div>
+          </div>
+      </div>
+    </div>
+  <!-- modal cetak data login -->
+
   <!-- Page Wrapper -->
   <div id="wrapper">
 

@@ -45,12 +45,12 @@
         </div>
       </li>
 
-      <!-- <li class="nav-item" id="sidebarKelas">
-        <a class="nav-link" href="<?= base_url()?>kelas">
-          <i class="fas fa-building"></i>
-          <span>Kelas</span>
+      <li class="nav-item" id="">
+        <a class="nav-link" href="#laporan" class="collapse-item text-light bg-success" data-toggle="modal">
+          <i class="fas fa-flag"></i>
+          <span>Laporan</span>
         </a>
-      </li> -->
+      </li>
 
       <li class="nav-item" id="">
         <a class="nav-link" href="<?= base_url()?>login/logout">
